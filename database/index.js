@@ -5,24 +5,24 @@ let repoSchema = mongoose.Schema({
   // TODO: your schema here!
   name: String,
   owner: String,
-  forks: Integer,
+  forks: Number,
   url: String
 
 });
 
 let Repo = mongoose.model('Repo', repoSchema);
 
-let save = (Repos/* TODO */) => {
+let save = (...args/* TODO */) => {
   // TODO: Your code here
   // This function should save a repo or repos to
   // the MongoDB
-  arguments.forEach(
-    Repo.save(function(err) {
-      if (err) {
-        console.log(err);
-      }
-    });
-  );
+  //args.forEach(
+    // Repo.create(args, function(err){
+    //   console.log(err);
+    // });
+    console.log('for each arg: ', args);
+    //Repo.save();
+  //);
 }
 
 module.exports.save = save;
