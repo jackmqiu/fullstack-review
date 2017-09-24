@@ -12,7 +12,7 @@ let repoSchema = mongoose.Schema({
 
 let Repo = mongoose.model('Repo', repoSchema);
 
-let save = (...args/* TODO */) => {
+let save = (...args) => {
   // TODO: Your code here
   // This function should save a repo or repos to
   // the MongoDB
